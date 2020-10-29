@@ -37,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
                         mTvDate.setText("Ngày lựa chọn : " + dayOfMonth + "/" + (month + 1)+ "/" + year);
                     }
                 }, yearCurrent, monthCurrent, dayCurrent);
+                datePickerDialog.getDatePicker().setMinDate(Calendar.getInstance().getTimeInMillis() - (24 * 60 * 60 * 1000));
                 datePickerDialog.show();
+
 
             }
         });
